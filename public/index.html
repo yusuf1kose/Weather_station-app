@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Station</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Weather Station</h1>
+    </header>
+    <section class="weather-display">
+      <h2>Current Weather Data</h2>
+      <div id="dataContainer" class="data-container">
+        <!-- Weather data will be injected here -->
+      </div>
+      <button onclick="fetchWeatherData()">Refresh Data</button>
+    </section>
+    <section class="average-temperature">
+      <h2>Average Temperature</h2>
+      <p id="averageTemp">Loading...</p>
+      <button onclick="fetchAverageTemperature()">Get Average Temperature</button>
+    </section>
+  </div>
+  <script src="/ui.js"></script>
+</body>
+</html>

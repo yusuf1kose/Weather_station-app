@@ -11,6 +11,16 @@
     <header>
       <h1>Weather Station</h1>
     </header>
+    <section class="city-selector">
+      <h2>Select a City</h2>
+      <select id="citySelector" onchange="handleCityChange()">
+        <option value="San Jose">San Jose</option>
+        <option value="Milpitas">Milpitas</option>
+        <option value="Pleasanton">Pleasanton</option>
+        <option value="Los Gatos">Los Gatos</option>
+        <option value="Santa Clara">Santa Clara</option>
+      </select>
+    </section>
     <section class="weather-display">
       <h2>Current Weather Data</h2>
       <div id="dataContainer" class="data-container">

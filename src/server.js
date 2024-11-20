@@ -5,18 +5,26 @@ const app = express();
 
 app.use(express.static('public'));
 
-app.get('/data', (req, res) => {
-  const data = getData();
+// Endpoint for fetching weather data for a specific city
+app.get('/data/:city', (req, res) => {
+  const city = req.params.city;
+  const data = getData(city);
   res.json(data);
 });
 
-app.get('/average', (req, res) => {
-  const data = getData();
+// Endpoint for fetching the average temperature for a specific city
+app.get('/average/:city', (req, res) => {
+  const city = req.params.city;
+  const data = getData(city);
   const avgTemp = calculateAverageTemperature(data);
   res.json({ averageTemperature: avgTemp });
 });
 
-setInterval(collectData, 5000); // Collect new data every 5 seconds
+// Collect data for all cities every 5 seconds
+const cities = ["San Jose", "Milpitas", "Pleasanton", "Los Gatos", "Santa Clara"];
+setInterval(() => {
+  cities.forEach(city => collectData(city));
+}, 5000);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

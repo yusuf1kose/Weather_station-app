@@ -60,3 +60,4 @@ document.addEventListener('DOMContentLoaded', () => {
   fetchWeatherData(selectedCity);
   fetchAverageTemperature(selectedCity);
 });
+

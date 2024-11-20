@@ -29,6 +29,18 @@
     margin-bottom: 20px;
   }
   
+  .city-selector {
+    margin: 20px 0;
+  }
+  
+  .city-selector select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    max-width: 300px;
+  }
+  
   .weather-display, .average-temperature {
     margin: 20px 0;
   }
@@ -57,4 +69,5 @@
   p {
     font-size: 1.2em;
   }
+
   
